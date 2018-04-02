@@ -10,13 +10,13 @@ Due to the file size restriction, only matern data is available.
 
 # 1.Prepare point data
 You can try make_lattice.py or make_matern.py.  
-The point data will be saved as data/lattice/pcd2_side20_iid100_square_014/pcd/pcd_0.txt
+The point data will be saved as data/matern/pcd2_lambda100_width1_distance005_iid100_type_0/pcd/pcd_0.txt
 
 
 # 2.Compute the persistence diagrams
 You can try run_lattice.sh or run_matern.sh.  
 In order to use the shell script, you need to install HomCloud (http://www.wpi-aimr.tohoku.ac.jp/hiraoka_labo/homcloud/index.en.html)  
-You can check the persistence diagram of data/lattice/pcd2_side20_iid100_square_014/pcd/pcd_0.txt in data/lattice/pcd2_side20_iid100_square_014/pcd/dim1_0.txt (dim1 means 1 dimensional persistence diagram)
+You can check the persistence diagram of data/matern/pcd2_lambda100_width1_distance005_iid100_type_0/pcd/pcd_0.txt in data/matern/pcd2_lambda100_width1_distance005_iid100_type_0/pcd/dim1_0.txt (dim1 means 1 dimensional persistence diagram)
 
 
 # (Optional) Let's see the persistence diagrams as histogram, visualized PWGK and persistence landscape.
@@ -43,30 +43,30 @@ If you change 1.136 to 1.135 by changing the comment out, you can see the diffic
 Try main.py  
 The results in python console  
 """  
-lattice ['square_017', 'gauss_010']  
-one   
-0.0285741 0.828  
+matern ['type_0', 'type_2']  
+one  
+0.0011803 1.0  
 linear   
-0.0121694 0.944  
+0.1276194 0.456  
 arctan   
-0.0095914 0.96  
+0.0663033 0.655  
 """  
-means a null hypothesis is "square_017" = "gauss_010"  
+means a null hypothesis is "type_0" = type_2"  
 one, linear, arctan mean the weight function w(b,d) = 1, d-b, arctan(C(d-b)^p), resp.  
 The left value is the average of p-value and the right is the statistical power (probability to reject the null distribution correctly).  
 
-If you are concern the Type I error, please change False to True in 1.90, and then the right value means the probability that Type I error happens because the null hypothesis is  "gauss_010" = "gauss_010" and the rejection is the Type I error.
+If you are concern the Type I error, please change False to True in 1.90, and then the right value means the probability that Type I error happens because the null hypothesis is  "type_2" = "type_2" and the rejection is the Type I error.
 
 
 # 3.3 Compute the confidence intervals
 Try bootstrap.py  
 The results in python console  
 """  
-lattice ['square_017', 'gauss_010'] 100 [0.5, 0.6] 0.05  
+matern ['type_0', 'type_2'] 100 [0.07, 0.075] 0.01  
 95 percent confidence interval  
 [ a b ]  
 [ c d ]  
 """  
-means the confidence interval of 'square_017' is [a,c] and 'gauss_010' is [b,d].  
+means the confidence interval of 'type_0' is [a,c] and 'type_2' is [b,d].  
 You can also check data/lattice/bootstrap_one.png
 
