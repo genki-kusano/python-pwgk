@@ -73,3 +73,7 @@ matern ['type_0', 'type_2'] 100 [0.07, 0.075] 0.01
 means the confidence interval of 'type_0' is [a,c] and 'type_2' is [b,d].  
 You can also check data/lattice/bootstrap_one.png
 
+# 3.* Try what you want to do by kernel method
+In kpca.py or main.py, we compute the Gram matrix of the PWGK as "mat_gram_pwgk".  
+If you want to apply another kernel methods, you can use this Gram matrix.
+
