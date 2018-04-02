@@ -5,6 +5,8 @@ If you have your persistence diagrams, skip to 3.
 Then, please rename your persistence diagrams as   
 data/{type of data}/{name of data}/pcd/dim{dimension of PD}_{data index}.txt   
 
+You can also use data.zip as an example data.  
+Due to the file size restriction, only matern data is available.  
 
 # 1.Prepare point data
 You can try make_lattice.py or make_matern.py.  
