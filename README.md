@@ -1,6 +1,6 @@
 Edited by Genki Kusano <https://sites.google.com/site/genkikusano/home>
 
-This page is for python codes used in "Persistence Weighted Gaussian Kernel for Probability Distributions on the Space of Persistence Diagrams " <https://arxiv.org/abs/1803.08269>  
+This page is for python codes used in "On the Expectation of a Persistence Diagram by the Persistence Weighted Kernel" <https://arxiv.org/abs/1803.08269>  
 For PWGK, peristence landscape, persistence image, kernel PCA, kernel Fisher discriminat ratio, please see "Kernel Method for Persistence Diagrams via Kernel Embedding and Weight Factor" <https://arxiv.org/abs/1706.03472> , which will be appear in JMLR.  
 I have confirmed the codes work on MacOS High Sierra and python 3.6.1
 
